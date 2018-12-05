@@ -23,22 +23,22 @@ namespace HomeSales
                 initial = Convert.ToChar(ReadLine());
                 if (initial == 'D' || initial == 'd')
                 {
-                    WriteLine("Enter the amount of sales.");
+                    WriteLine("Enter the amount of sales, or Z to end.");
                     danielle = danielle + Convert.ToDouble(ReadLine());
                 }
                 else if (initial == 'E' || initial == 'e')
                 {
-                    WriteLine("Enter the amount of sales.");
+                    WriteLine("Enter the amount of sales, or Z to end.");
                     edward = edward + Convert.ToDouble(ReadLine());
                 }
                 else if (initial == 'F' || initial == 'f')
                 {
-                    WriteLine("Enter the amount of sales.");
+                    WriteLine("Enter the amount of sales, or Z to end.");
                     francis = francis + Convert.ToDouble(ReadLine());
                 }
                 else if (initial != 'D' || initial != 'd' || initial != 'E' || initial != 'e' || initial != 'F' || initial != 'f' || initial != 'Z' || initial != 'z')
                 {
-                    WriteLine("Initial not recognized.");
+                    WriteLine("Initial Not recognized, or Z inputed. Ending Program.");
                 }
             } while (initial != 'z' && initial != 'Z');
 
