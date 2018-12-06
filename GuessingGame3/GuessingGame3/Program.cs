@@ -45,6 +45,7 @@ namespace GuessingGame3
                         if (guess > againH)
                         {
                             result = "You... You... Did you really just?... Oh my... You really are that stupid... I said go Lower.";
+                            numGuesses++;
                         }
                         againH = guess;
                     }
@@ -55,6 +56,7 @@ namespace GuessingGame3
                         if(guess < againL)
                         {
                             result = "You... You... Did you really just?... Oh my... You really are that stupid... I said go Higher.";
+                            numGuesses++;
                         }
                         againL = guess;
                     }
