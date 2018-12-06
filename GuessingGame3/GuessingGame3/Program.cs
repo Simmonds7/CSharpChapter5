@@ -18,6 +18,8 @@ namespace GuessingGame3
             string guessString;
             int min = 1;
             int max = 11;
+            int againL = 1;
+            int againH = 10;
             int numGuesses = 0;
             string result = null;
             Random ranNumberGenerator = new Random();
@@ -25,7 +27,7 @@ namespace GuessingGame3
             randomNumber = ranNumberGenerator.Next(min, max);
             do
             {
-                Write("Welcome to the Random Number Guessing Game, R.N.G.G. Choose a number between 1 and 10 (One and Ten inclusive).");
+                Write("Choose a number between 1 and 10 (One and Ten inclusive).");
                 guessString = ReadLine();
                 guess = Convert.ToInt32(guessString);
 
@@ -40,11 +42,21 @@ namespace GuessingGame3
                     {
                         result = "Your guess was incorrect. Try going lower.";
                         numGuesses++;
+                        if (guess > againH)
+                        {
+                            result = "You... You... Did you really just?... Oh my... You really are that stupid... I said go Lower.";
+                        }
+                        againH = guess;
                     }
                     else if (guess < randomNumber)
                     {
                         result = "Your guess was incorrect. Try going higher.";
                         numGuesses++;
+                        if(guess < againL)
+                        {
+                            result = "You... You... Did you really just?... Oh my... You really are that stupid... I said go Higher.";
+                        }
+                        againL = guess;
                     }
                 }
                 else
